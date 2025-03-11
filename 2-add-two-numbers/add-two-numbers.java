@@ -15,8 +15,17 @@ class Solution {
         int carry = 0;
 
         while (t1 != null || t2 != null) {
-            int x = (t1 != null) ? t1.val : 0;
-            int y = (t2 != null) ? t2.val : 0;
+            int x,y;
+            if(t1!=null){
+                x = t1.val;
+            }
+            else x = 0;
+
+            if(t2!=null){
+                y = t2.val;
+            }
+            else y = 0;
+
             int sum = x + y + carry;
 
             carry = sum / 10;
