@@ -7,7 +7,7 @@ JOIN (
       COUNT(*) as totalReports
       FROM Employee
       GROUP BY managerId
-      HAVING totalReports >= 5
+      HAVING COUNT(*) >= 5
      ) AS sub
 
 ON e.id = sub.managerId;
