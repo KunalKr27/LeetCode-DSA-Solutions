@@ -3,10 +3,10 @@ class Solution {
         if(root==null) return;
         if(root.left==null && root.right==null){
             list.add(path + root.val);
-        }
+        }else{
         pathTraversal(root.left, path+root.val+"->", list);
         pathTraversal(root.right, path+root.val+"->", list);
-    }
+    }}
     public List<String> binaryTreePaths(TreeNode root) {
         List<String> list = new ArrayList<>();
         if(root == null) return list;
