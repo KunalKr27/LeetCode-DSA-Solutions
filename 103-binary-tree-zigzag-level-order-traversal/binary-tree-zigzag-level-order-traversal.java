@@ -14,7 +14,7 @@ class Solution {
             if(temp.left !=null) q.add(temp.left);
             if(temp.right !=null)q.add(temp.right);
         }
-        if(currLevel %2 ==0)Collections.reverse(currList);
+        if(currLevel %2 ==0) Collections.reverse(currList);
         res.add(currList);
         currLevel += 1;
         }
